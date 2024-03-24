@@ -31,7 +31,7 @@ public class RedisLockAspect {
     private final SpelExpressionParser spelExpressionParser = new SpelExpressionParser();
     private final DefaultParameterNameDiscoverer parameterNameDiscoverer = new DefaultParameterNameDiscoverer();
 
-    @Around("@annotation(redisLock)")
+//    @Around("@annotation(redisLock)")
     public Object aroundRedisLock(ProceedingJoinPoint point, RedisLock redisLock) throws Throwable{
         log.info("正在尝试请求获取锁");
         String value = redisLock.value();
